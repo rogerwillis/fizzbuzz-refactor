@@ -21,26 +21,26 @@ $(document).ready(function(e) {
 
         }
         //check to see if it is a decimal
-        else if (number % 1 != 0) {
+        else if (+number % 1 != 0) {
             $("#myModal").modal("show");
             $(".modal-body").html("Really? <strong>" + number + "</strong> is not a whole number. I only deal in big numbers jerky! Try again!!!!");
 
         }
         //is the input blank??
-        else if (number == "") {
+        else if (+number == "") {
             $("#myModal").modal("show");
             $(".modal-body").html("Um... Please put in a number there sailor!");
 
         }
 
         //is the input blank??
-        else if (number == "0") {
+        else if (+number == "0") {
             $("#myModal").modal("show");
             $(".modal-body").html("Sorry, Zero is going to output zero items... Nice try there buckaroo!");
 
         } else {
             //Loop it baby!
-            for (var i = 1; i <= number; i++) {
+            for (var i = 1; i <= +number; i++) {
 
                 //if divisible by 15 - Why do I need to put divisible by 15 first for it to work?
                 if (i % 15 === 0) {
