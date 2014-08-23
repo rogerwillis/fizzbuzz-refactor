@@ -1,13 +1,6 @@
 $(document).ready(function(e) {
-
-    $(".btn-submit").on('click', function() {
-
-        //reset input
-        $('tr').remove();
-        //get input
-        inputNumber($("#input").val());
-    });
-
+	//focus input box
+	$('input').focus();
 
     //one named function
     var inputNumber = function(number) {
@@ -79,15 +72,23 @@ $(document).ready(function(e) {
 
     };
 	
-	 /*Trigger Button Click on Enter Button Press*/
    
-         /*Trigger Button Click on Enter Button Press*/
+         /*Trigger Button Click on Enter Press*/
     $("input").keyup(function (event) {
         if (event.keyCode == 13) {
             $(".btn-submit").click();
         }
     });
 
+
+	//Button Submit
+	
+    $(".btn-submit").on('click', function() {
+        //reset input
+        $('tr').remove();
+        //get input
+        inputNumber($("#input").val());
+    });
 
 
 });
