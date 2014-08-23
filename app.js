@@ -44,20 +44,20 @@ $(document).ready(function(e) {
 
                 //if divisible by 15 - Why do I need to put divisible by 15 first for it to work?
                 if (i % 15 === 0) {
-                    $(".list").append("<tr class='danger'><td><strong><span class='glyphicon glyphicon-star'></span>   Fizz Buzz</strong></td></tr>");
+                    $(".list").append("<tr><td><strong>Fizz Buzz</strong></td></tr>");
                 }
 
                 //if divisibkle by 3
                 else if (i % 3 === 0) {
 
-                    $(".list").append("<tr class='warning'><td>Fizz</td></tr>");
+                    $(".list").append("<tr><td>Fizz</td></tr>");
 
                 }
 
                 //if divisible by 5
                 else if (i % 5 === 0) {
 
-                    $(".list").append("<tr class='success'><td>Buzz</td></tr>");
+                    $(".list").append("<tr><td>Buzz</td></tr>");
 
                 }
 
@@ -65,6 +65,11 @@ $(document).ready(function(e) {
                 else {
 
                     $(".list").append("<tr><td>" + i + "</td></tr>");
+					//just for fun
+					if(number < 5 && number > 0){
+						 $("#myModal").modal("show");
+            $(".modal-body").html("Really? Just <strong> " + number + "</strong>? That was boring");
+			}
 
                 }
             }
