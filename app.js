@@ -78,5 +78,16 @@ $(document).ready(function(e) {
 
 
     };
+	
+	 /*Trigger Button Click on Enter Button Press*/
+   
+         /*Trigger Button Click on Enter Button Press*/
+    $("input").keyup(function (event) {
+        if (event.keyCode == 13) {
+            $(".btn-submit").click();
+        }
+    });
+
+
 
 });
